@@ -153,10 +153,10 @@ export default class TransactionScreen extends React.Component {
   }
   checkStudentEligibilityForBookIssue = async () => {
     //collection anme incorrect
-    const studentRef = await db.collection("student")
+    const studentRef = await db.collection("students")
       .where("studentId", "==", this.state.scannedStudentId).get()
     var ss = ''
-    if (studentRef.docs.lenght == 0) {
+    if (studentRef.docs.length == 0) {
       this.setState({
         scannedStudentId: '',
         scannedBookId: '',
