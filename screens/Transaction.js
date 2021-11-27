@@ -206,7 +206,7 @@ export default class TransactionScreen extends React.Component {
     const bookRef = await db.collection("books")
       .where("bookId", "==", this.state.scannedBookId).get()
       var tt = ''
-    if (bookRef.docs.lenght == 0) {
+    if (bookRef.docs.length == 0) {
       tt = false;
     }
     else{
